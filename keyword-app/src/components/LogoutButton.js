@@ -1,6 +1,6 @@
 'use client';
 
-import { signOut } from 'next-auth/react';
+import { signOut } from '@/app/api/auth/[...nextauth]/route';
 
 export default function LogoutButton() {
   return (
