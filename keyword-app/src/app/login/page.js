@@ -20,7 +20,7 @@ export default function LoginPage() {
             const result = await signIn('credentials', {
                 username,
                 password,
-                redirectTo: '/',
+                redirect: false,
             });
 
             if (result?.error) {
