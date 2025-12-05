@@ -1,20 +1,19 @@
 import { auth } from "@/app/api/auth/[...nextauth]/route"
 
-export default auth((req) => {
-  const { pathname } = req.nextUrl
-  
-  // Allow access to login page and API auth routes
-  if (pathname.startsWith('/login') || pathname.startsWith('/api/auth')) {
-    return
-  }
-  
-  // For all other routes, auth middleware will handle authentication
-  // If not authenticated, it will redirect to login
-})
+export default auth
 
 export const config = {
   matcher: [
-    "/((?!api/auth|login|_next/static|_next/image|favicon.ico|.*\\.).*)",
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api/auth (NextAuth routes)
+     * - login (login page)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - files with extensions (e.g., .png, .jpg, etc.)
+     */
+    "/((?!api/auth|login|_next/static|_next/image|favicon.ico|.*\\..*).*)",
   ]
 }
 
