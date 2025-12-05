@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import LogoutButton from '@/components/LogoutButton';
 
 export default function BulkPage() {
     const [keywordsInput, setKeywordsInput] = useState('');

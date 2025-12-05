@@ -1,11 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useSession } from 'next-auth/react';
-import LogoutButton from '@/components/LogoutButton';
 
 export default function Home() {
-    const { data: session } = useSession();
     const [keyword, setKeyword] = useState('');
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
