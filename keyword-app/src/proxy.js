@@ -33,4 +33,3 @@ export const config = {
     "/((?!api/auth|login|_next/static|_next/image|favicon.ico|.*\\..*).*)",
   ]
 }
-

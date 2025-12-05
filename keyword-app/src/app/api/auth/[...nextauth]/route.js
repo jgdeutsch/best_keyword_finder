@@ -32,6 +32,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET || "your-secret-key-change-in-production",
+  trustHost: true, // Required for production deployments
   callbacks: {
     async jwt({ token, user }) {
       if (user) {

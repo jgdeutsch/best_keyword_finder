@@ -90,7 +90,13 @@ The app includes a login system. Default credentials:
 
 ## Deployment
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on deploying to GitHub and Vercel.
+### Current Status
+- ✅ **GitHub**: Published to [jgdeutsch/best_keyword_finder](https://github.com/jgdeutsch/best_keyword_finder)
+- ✅ **Vercel**: Deployed (deployment protection needs to be disabled for public access)
+
+### Documentation
+- See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions
+- See [SESSION_SUMMARY.md](./SESSION_SUMMARY.md) for complete project overview and highlights
 
 ## Notes
 
