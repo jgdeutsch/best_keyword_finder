@@ -1,6 +1,23 @@
 import { auth } from "@/app/api/auth/[...nextauth]/route"
+import { NextResponse } from "next/server"
 
-export default auth
+export default auth((req) => {
+  const { pathname } = req.nextUrl
+  const session = req.auth
+
+  // Allow access to login page and API auth routes
+  if (pathname.startsWith('/login') || pathname.startsWith('/api/auth')) {
+    return NextResponse.next()
+  }
+
+  // Redirect to login if not authenticated
+  if (!session) {
+    const loginUrl = new URL('/login', req.url)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  return NextResponse.next()
+})
 
 export const config = {
   matcher: [
