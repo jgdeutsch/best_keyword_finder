@@ -50,9 +50,6 @@ export default function Home() {
 
             {/* Hero Section */}
             <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm flex flex-col gap-8 animate-fade-in">
-                <div className="w-full flex justify-end mb-4">
-                    <LogoutButton />
-                </div>
                 <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-center">
                     Keyword <span className="text-gradient">Finder</span>
                 </h1>

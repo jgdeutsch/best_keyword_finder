@@ -182,7 +182,6 @@ export default function BulkPage() {
                     <a href="/" className="text-indigo-400 hover:text-indigo-300 transition-colors underline">
                         ← Back to Single Search
                     </a>
-                    <LogoutButton />
                 </div>
                 
                 <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-center">
